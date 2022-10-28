@@ -1,15 +1,10 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;DatabaseName=personmanagementdb;encrypt=true;trustServerCertificate=true
+    url: jdbc:sqlserver://localhost;databaseName=PersonManagementDB
     username: sa
-    password: 123456
+    password: P@ssw0rd
   jpa:
     hibernate:
       ddl-auto: update
+      dialect: org.hibernate.dialect.SQLServer2017Dialect
     show-sql: true
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

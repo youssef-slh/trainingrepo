@@ -1,6 +1,8 @@
 spring:
   datasource:
     url: jdbc:sqlserver://localhost;databaseName=PersonManagementDB
+    username: to-be-overwritten-by-vault-value
+    password: to-be-overwritten-by-vault-value
   jpa:
     hibernate:
       ddl-auto: update

@@ -1,8 +1,6 @@
 spring:
   datasource:
     url: jdbc:sqlserver://localhost;databaseName=PersonManagementDB
-    username: sa
-    password: P@ssw0rd
   jpa:
     hibernate:
       ddl-auto: update

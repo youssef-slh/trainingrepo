@@ -20,5 +20,5 @@ spring:
 
 restTemplate:
        person:
-           url: http://localhost:8095/api/v1/Person
+           url: http://person-management/api/v1/Person
     

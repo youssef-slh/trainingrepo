@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
       - id: travel-management-id
-        uri: lb://travel-management
+        uri: lb://travels-management
         predicates:
         - Path=/travel/**
       - id: person-management-server

@@ -7,7 +7,7 @@ management:
          include: "*"
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=PersonManagementDB
+    url: jdbc:sqlserver://localhost:1433;databaseName=PersonManagementDB;encrypt=true;trustServerCertificate=true;
     username: to-be-overwritten-by-vault-value
     password: to-be-overwritten-by-vault-value
   jpa:

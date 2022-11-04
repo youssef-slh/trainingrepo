@@ -15,3 +15,8 @@ spring:
       ddl-auto: update
       dialect: org.hibernate.dialect.SQLServer2017Dialect
     show-sql: true
+
+restTemplate:
+       person:
+           url: http://localhost:8095/api/v1/Person
+    

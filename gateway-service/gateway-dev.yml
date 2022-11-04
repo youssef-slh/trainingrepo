@@ -25,3 +25,6 @@ spring:
         
   main:
     web-application-type: reactive
+
+logging:
+  level: debug

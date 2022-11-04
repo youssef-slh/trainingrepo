@@ -8,7 +8,7 @@ spring:
       - id: travel-management-server
         uri: http://localhost:8096/
         predicates:
-        - Path=/travel/*
+        - Path=/travel/**
       - id: person-management-server
         uri: http://localhost:8095/
         predicates:

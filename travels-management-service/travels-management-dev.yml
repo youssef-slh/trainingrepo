@@ -1,0 +1,17 @@
+server:
+  port: 8096
+management:
+  endpoints:
+    web:
+      exposure:
+         include: "*"
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=TravelsManagementDB;encrypt=true;trustServerCertificate=true;
+    username: to-be-overwritten-by-vault-value
+    password: to-be-overwritten-by-vault-value
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.SQLServer2017Dialect
+    show-sql: true

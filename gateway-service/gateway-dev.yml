@@ -5,12 +5,12 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: travel-management-server
-        uri: http://localhost:8096/
+      - id: travel-management-id
+        uri: lb://travel-management
         predicates:
         - Path=/travel/**
       - id: person-management-server
-        uri: http://localhost:8095/
+        uri: lb://person-management
         predicates:
         - Path=/person/**
       discovery:

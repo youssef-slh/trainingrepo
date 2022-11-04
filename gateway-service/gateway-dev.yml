@@ -16,8 +16,8 @@ spring:
          -id: service-travel-id
           uri: http://localhost:8096
           predicates:
-                    Path= /travel/**
+                    -Path=/travel/**
          -id: service-person-id
           uri: http://localhost:8095
           predicates:
-                    Path= /person/**
+                    -Path=/person/**

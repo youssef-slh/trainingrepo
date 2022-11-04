@@ -1,23 +1,27 @@
 server:
   port: 8097
-management:
-  endpoints:
-    web:
-      exposure:
-         include: "*"
 
 spring:
   cloud:
     gateway:
-       discovery:
-         locator:
-            enabled: true
-       routes:
-         -id: service-travel-id
-          uri: http://localhost:8096
-          predicates:
-                    -Path=/travel/**
-         -id: service-person-id
-          uri: http://localhost:8095
-          predicates:
-                    -Path=/person/**
+      routes:
+      - id: travel-management-server
+        uri: http://localhost:8096/
+        predicates:
+        - Path=/travel/*
+      - id: person-management-server
+        uri: http://localhost:8095/
+        predicates:
+        - Path=/person/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+
+    loadbalancer:
+      ribbon:
+        enabled: false
+        
+  main:
+    web-application-type: reactive

@@ -10,7 +10,7 @@ spring:
         predicates:
         - Path=/PersonManagement/**
       - id: travel-management-server
-        uri: lb://travel-management
+        uri: lb://travels-management
         predicates:
         - Path=/TravelManagement/**
       discovery:

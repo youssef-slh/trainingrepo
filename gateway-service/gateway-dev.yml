@@ -24,3 +24,12 @@ spring:
         enabled: false
   main:
     web-application-type: reactive
+
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE

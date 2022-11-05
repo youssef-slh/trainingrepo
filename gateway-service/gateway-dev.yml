@@ -6,11 +6,11 @@ spring:
     gateway:
       routes:
       - id: travel-management-id
-        uri: http://localhost:8096/
+        uri: localhost:8096
         predicates:
         - Path=/travel/**
       - id: person-management-server
-        uri: http://localhost:8095/
+        uri: localhost:8095
         predicates:
         - Path=/person/**
       discovery:

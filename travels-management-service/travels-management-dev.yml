@@ -22,3 +22,10 @@ restTemplate:
        person:
            url: lb://person-management/PersonManagement/api/v1/Person
     
+keycloak:
+  realm: border-management
+  auth-server-url: http://localhost:8093
+  resource: travels-manaegment
+  public-client: true
+  bearer-only: true
+  

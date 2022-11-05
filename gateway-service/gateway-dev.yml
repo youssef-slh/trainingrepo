@@ -5,14 +5,14 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: travel-management-id
-        uri: localhost:8096
-        predicates:
-        - Path=/travel/**
       - id: person-management-server
-        uri: localhost:8095
+        uri: lb://person-management
         predicates:
-        - Path=/person/**
+        - Path=/PersonManagement/**
+      - id: travel-management-server
+        uri: lb://travel-management
+        predicates:
+        - Path=/TravelManagement/**
       discovery:
         locator:
           enabled: true
@@ -22,7 +22,5 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-        
   main:
     web-application-type: reactive
-
